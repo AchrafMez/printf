@@ -1,4 +1,4 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 #include <stdarg.h>
 
 int ft_print_format(char specifier, va_list ap)
@@ -16,10 +16,9 @@ int ft_print_format(char specifier, va_list ap)
         count += ft_putu(va_arg(ap, unsigned int));
     else if (specifier == 'p')
         {
-            ft_putstr("0x");
             count = 2;
-            count += ft_putnbr_hexa(va_arg(ap, unsigned int), specifier);
-            printf("%d count is", count);
+            ft_putstr("0x");
+            count += ft_putnbr_hexa(va_arg(ap, unsigned long), specifier);
         } 
     else if(specifier == 'x' || specifier == 'X')
         count += ft_putnbr_hexa(va_arg(ap, unsigned int), specifier);
