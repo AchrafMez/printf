@@ -21,17 +21,21 @@ int ft_printf(const char *format, ...)
         return (-1);
     va_start(ap, format);
     count = 0;
-    // if(format == NULL)
-    // {
-    //     count += ft_putstr("(null)");
-    //     return count;
-    // }
+    if(format == NULL)
+    {
+        count += ft_putstr("(null)");
+        return count;
+    }
     if(*format)
     {
         while (*format)
         {
             if(*format == '%')
+            {
+                if(*(format + 1) == '\0')
+                    return count;
                 count += ft_print_format(*(++format), ap);   
+            }
             else
                 count += write(1, &*format, 1);
             format++;

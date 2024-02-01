@@ -12,7 +12,6 @@ int ft_print_format(char specifier, va_list ap);
 int ft_putchar(int c);
 int ft_putstr(char *str);
 int    ft_putnbr_hexa(unsigned long n, char specifier);
-int    ft_putnbr(int n);
-int    ft_putu(unsigned int n);
+int    ft_putnbr(long n);
 
 #endif
