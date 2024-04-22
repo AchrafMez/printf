@@ -6,14 +6,14 @@
 /*   By: amezioun <amezioun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 10:19:09 by amezioun          #+#    #+#             */
-/*   Updated: 2024/01/25 10:19:10 by amezioun         ###   ########.fr       */
+/*   Updated: 2024/01/27 16:42:22 by amezioun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putchar(int c)
+int	ft_putchar(int c)
 {
-    write(1, &c, 1);
-    return 1;
+	write(1, &c, 1);
+	return (1);
 }
